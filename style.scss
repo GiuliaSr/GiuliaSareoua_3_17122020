@@ -1,6 +1,217 @@
+$primary: #9356dc;
+$second: #ff79da;
+$third: #99e2d0;
+$backgroundlight: #f7f7f7;
+
+@mixin logo {
+    font-family: "Shrikhand", cursive;
+}
+
+@mixin heading-sections {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+@mixin subtitle {
+    font-size: 1rem;
+    font-weight: bold;
+}
+@mixin resa-flexstyle {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin footer {
+    background-color: #323232;
+    color: #fff;
+}
+@mixin contentmarging {
+    margin: 0 2rem;
+}
+/*général*/
+body {
+    font-family: "Roboto", sans-serif;
+
+    box-sizing: border-box;
+}
+main {
+    margin: 0 -1rem;
+}
+/*
+@media screen and (max-width: 480px) */
+/*HEADER*/
 .omf-header {
-    background-color: aliceblue;
-    &:hover {
-        color: #748cb1;
+    @include flex-center;
+    &__logo {
+        @include logo;
+        font-size: 2rem;
+        margin: 1rem;
+    }
+}
+/*SECTION1*/
+.omf-resa {
+    background-color: $backgroundlight;
+    @include resa-flexstyle;
+    box-shadow: 0px -1px 5px #cfcfcf;
+    padding-bottom: 2rem;
+    &__townbox {
+        width: 100%;
+        background-color: #ededed;
+        @include flex-center;
+    }
+
+    &__towncontentbox {
+        @include flex-center;
+        justify-content: flex-start;
+
+        width: 11rem;
+    }
+    &__town-content {
+        @include subtitle;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__contentbox {
+        @include resa-flexstyle();
+        @include contentmarging();
+    }
+    &__heading {
+        @include heading-sections;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    &__description {
+        font-weight: normal;
+        font-size: 1rem;
+        text-align: center;
+    }
+    &__btn {
+        @include subtitle;
+        background: linear-gradient($second, $primary);
+        color: #fff;
+        border-radius: 2rem;
+        padding: 0 1rem;
+        margin: 1rem 0;
+        box-shadow: 1px 1px 5px 1px #cfcfcf;
+    }
+}
+/*SECTION2*/
+.omf-fonct {
+    display: flex;
+    flex-flow: column wrap;
+    @include contentmarging();
+    &__heading {
+        @include heading-sections;
+    }
+    &__wrapper {
+        @include flex-center;
+        margin-bottom: 2rem;
+        height: 4rem;
+    }
+    &__number-box {
+        background-color: $primary;
+        @include flex-center;
+        color: #fff;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        margin-right: -1rem;
+        z-index: 1;
+    }
+}
+.fonct-contentbox {
+    display: flex;
+    align-items: center;
+    background-color: $backgroundlight;
+    box-shadow: 1px 1px 5px 1px #cfcfcf;
+    border-radius: 1rem;
+    padding: 0 2rem;
+    width: 80%;
+    height: inherit;
+
+    &__icon {
+        margin-right: 2rem;
+    }
+    &__content {
+        @include subtitle;
+        width: 100%;
+    }
+}
+/*SECTION3*/
+.omf-menus {
+    background-color: $backgroundlight;
+    padding: 1rem 0;
+    &__heading {
+        @include heading-sections;
+        @include contentmarging();
+        padding: 1rem 0;
+    }
+    &__contentbox {
+        @include contentmarging();
+        box-shadow: 1px 1px 5px 1px #cfcfcf;
+        margin-bottom: 2rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        height: 25%;
+        overflow: hidden;
+    }
+    &__img {
+        height: 10rem;
+    }
+    &__captionbox {
+        margin: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__textwrap {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    &__title {
+        @include subtitle;
+        margin: 0;
+    }
+    &__place {
+        @include subtitle;
+        font-weight: normal;
+        margin: 0;
+    }
+}
+.omf-menus img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.omf-footer {
+    @include footer;
+    &__contentbox {
+        @include contentmarging();
+        padding: 1rem 0;
+    }
+    &__heading {
+        @include logo;
+        margin: 0;
+    }
+    &__lign {
+        display: flex;
+        align-items: center;
+        height: 2rem;
+    }
+    &__icon {
+        width: 1rem;
+        margin-right: 1rem;
+    }
+    &__text {
+        height: 2rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
     }
 }
