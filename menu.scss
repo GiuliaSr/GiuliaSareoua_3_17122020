@@ -1,0 +1,144 @@
+$primary: #9356dc;
+$second: #ff79da;
+$third: #99e2d0;
+$backgroundlight: #f7f7f7;
+
+@mixin logo {
+    font-family: "Shrikhand", cursive;
+}
+
+@mixin heading-sections {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+@mixin subtitle {
+    font-size: 1rem;
+    font-weight: bold;
+}
+@mixin resa-flexstyle {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin footer {
+    background-color: #323232;
+    color: #fff;
+}
+@mixin contentmarging {
+    margin: 0 1rem;
+}
+/*général*/
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menus-header {
+    display: flex;
+    align-items: center;
+    @include contentmarging;
+    &__logo {
+        @include logo;
+        @include flex-center;
+        font-size: 2rem;
+        width: 100%;
+    }
+    &__icon {
+        justify-content: flex-start;
+        font-size: 1.5rem;
+    }
+}
+.menus-banner {
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.menus-container {
+    background-color: $backgroundlight;
+    border-radius: 2rem 2rem 0 0;
+    z-index: 1;
+    position: relative;
+    margin-top: -4rem;
+}
+.menus-contentbox {
+    @include contentmarging;
+    padding-bottom: 2rem;
+    &__heading {
+        @include logo;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__category {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 3px solid $third;
+        width: 3rem;
+        font-weight: 100;
+    }
+    &__contentbox {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        box-shadow: 1px 1px 5px 1px #cfcfcf;
+        margin-bottom: 1rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    &__title {
+        @include subtitle;
+        margin: 0;
+        padding-bottom: 0.5rem;
+    }
+    &__descriptionbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__description {
+        margin: 0;
+        font-weight: 100;
+    }
+    &__price {
+        @include subtitle;
+        margin: 0;
+    }
+}
+.omf-footer {
+    @include footer;
+    &__contentbox {
+        @include contentmarging();
+        padding: 1rem 0;
+    }
+    &__heading {
+        @include logo;
+        margin: 0;
+    }
+    &__lign {
+        display: flex;
+        align-items: center;
+        height: 2rem;
+    }
+    &__icon {
+        width: 1rem;
+        margin-right: 1rem;
+    }
+    &__text {
+        height: 2rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+}
