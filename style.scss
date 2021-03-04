@@ -2,7 +2,7 @@ $primary: #9356dc;
 $second: #ff79da;
 $third: #99e2d0;
 $backgroundlight: #f7f7f7;
-
+$degrade: linear-gradient($second, $primary);
 @mixin logo {
     font-family: "Shrikhand", cursive;
 }
@@ -33,14 +33,18 @@ $backgroundlight: #f7f7f7;
 @mixin contentmarging {
     margin: 0 2rem;
 }
+@mixin gradient-light {
+    background: rgba(255, 255, 255, 0);
+}
+@mixin gradient-dark {
+    background: linear-gradient($second, $primary);
+}
 /*général*/
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
     box-sizing: border-box;
 }
-
-/*
 
 /*HEADER*/
 .omf-header {
@@ -97,8 +101,14 @@ body {
         padding: 0 1rem;
         margin: 1rem 0;
         box-shadow: 1px 1px 5px 1px #cfcfcf;
+        transition: all 250ms;
+        &:hover {
+            opacity: 0.9;
+            box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
+        }
     }
 }
+
 /*SECTION2*/
 .omf-fonct {
     display: flex;
@@ -123,6 +133,7 @@ body {
         z-index: 1;
     }
 }
+
 .fonct-contentbox {
     display: flex;
     align-items: center;
@@ -132,14 +143,22 @@ body {
     padding: 0 2rem;
     width: 80%;
     height: inherit;
-
+    transition: all 0.25s;
+    &:hover {
+        background-color: lighten($color: $primary, $amount: 35);
+    }
     &__icon {
         margin-right: 2rem;
+        color: #323232;
     }
     &__content {
         @include subtitle;
         width: 100%;
     }
+}
+
+.fonct-contentbox:hover .fonct-contentbox__icon {
+    color: $primary;
 }
 /*SECTION3*/
 .omf-menus {
@@ -158,9 +177,20 @@ body {
         border-radius: 1rem;
         height: 25%;
         overflow: hidden;
+        position: relative;
     }
     &__img {
         height: 10rem;
+    }
+    &__img span {
+        background-color: $third;
+        color: darken($third, 50);
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        font-size: 0.8rem;
     }
     &__captionbox {
         margin: 0.5rem;
@@ -180,6 +210,27 @@ body {
         @include subtitle;
         font-weight: normal;
         margin: 0;
+    }
+    &__like {
+        &:hover {
+            & .omf-menus__like--bg {
+                transition: opacity 250ms;
+                opacity: 1;
+            }
+            &.omf-menus__like--nobg {
+                opacity: 0;
+            }
+        }
+        &--bg {
+            opacity: 0;
+            background: linear-gradient($primary, $second);
+            background-clip: text;
+        }
+        &--nobg {
+            opacity: 1;
+
+            position: absolute;
+        }
     }
 }
 .omf-menus img {
