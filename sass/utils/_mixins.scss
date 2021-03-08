@@ -1,0 +1,36 @@
+@mixin logo {
+    font-family: "Shrikhand", cursive;
+}
+
+@mixin heading-sections {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+@mixin subtitle {
+    font-size: 1rem;
+    font-weight: bold;
+}
+@mixin resa-flexstyle {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin footer {
+    background-color: #323232;
+    color: #fff;
+}
+@mixin contentmarging {
+    margin: 0 2rem;
+}
+@mixin gradient-light {
+    background: rgba(255, 255, 255, 0);
+}
+@mixin gradient-dark {
+    background: linear-gradient($second, $primary);
+}

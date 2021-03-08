@@ -1,60 +1,9 @@
-$primary: #9356dc;
-$second: #ff79da;
-$third: #99e2d0;
-$backgroundlight: #f7f7f7;
-$degrade: linear-gradient($second, $primary);
-@mixin logo {
-    font-family: "Shrikhand", cursive;
-}
+@import "./sass/utils/variables";
+@import "./sass/utils/mixins";
+@import "./sass/base/base";
+@import "./sass/layout/header";
+@import "./sass/layout/footer";
 
-@mixin heading-sections {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-@mixin subtitle {
-    font-size: 1rem;
-    font-weight: bold;
-}
-@mixin resa-flexstyle {
-    display: flex;
-    flex-flow: wrap column;
-    justify-content: center;
-    align-items: center;
-}
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin footer {
-    background-color: #323232;
-    color: #fff;
-}
-@mixin contentmarging {
-    margin: 0 2rem;
-}
-@mixin gradient-light {
-    background: rgba(255, 255, 255, 0);
-}
-@mixin gradient-dark {
-    background: linear-gradient($second, $primary);
-}
-/*général*/
-body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/*HEADER*/
-.omf-header {
-    @include flex-center;
-    &__logo {
-        @include logo;
-        font-size: 2rem;
-        margin: 1rem;
-    }
-}
 /*SECTION1*/
 .omf-resa {
     background-color: $backgroundlight;
@@ -238,32 +187,7 @@ body {
     height: 100%;
     width: 100%;
 }
-.omf-footer {
-    @include footer;
-    &__contentbox {
-        @include contentmarging();
-        padding: 1rem 0;
-    }
-    &__heading {
-        @include logo;
-        margin: 0;
-    }
-    &__lign {
-        display: flex;
-        align-items: center;
-        height: 2rem;
-    }
-    &__icon {
-        width: 1rem;
-        margin-right: 1rem;
-    }
-    &__text {
-        height: 2rem;
-        margin: 0;
-        display: flex;
-        align-items: center;
-    }
-}
+
 /*TABLETTE*/
 @media screen and (min-width: 480px) and (max-width: 1099px) {
     .omf-fonct {

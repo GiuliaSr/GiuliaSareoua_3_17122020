@@ -72,6 +72,7 @@ body {
 .menus-contentbox {
     @include contentmarging;
     padding-bottom: 2rem;
+
     &__heading {
         @include logo;
         display: flex;
@@ -89,13 +90,21 @@ body {
     }
     &__contentbox {
         display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
+        flex-flow: row wrap;
+        justify-content: space-between;
         box-shadow: 1px 1px 5px 1px #cfcfcf;
         margin-bottom: 1rem;
         background-color: #fff;
         border-radius: 1rem;
         padding: 1rem;
+        overflow: hidden;
+        &:hover .menus-contentbox__right {
+            transform: translateX(-5rem);
+            margin-right: -1rem;
+        }
+        &:hover .menus-contentbox--confirmation i {
+            transform: rotate(360deg);
+        }
     }
     &__title {
         @include subtitle;
@@ -104,19 +113,43 @@ body {
     }
     &__descriptionbox {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-flow: column wrap;
     }
     &__description {
         margin: 0;
         font-weight: 100;
     }
+    &__right {
+        display: flex;
+        flex-flow: row wrap;
+        transition: all ease-in-out 0.5s;
+    }
     &__price {
         @include subtitle;
         margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    &--confirmation {
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        background-color: $third;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & i {
+            background-color: #fff;
+            color: $third;
+            border: 1px solid #fff;
+            border-radius: 2rem;
+            padding: 0.5rem;
+            transition-duration: 1s;
+        }
     }
 }
-.omf-footer {
+.menus-contentbox__contentbox .omf-footer {
     @include footer;
     &__contentbox {
         @include contentmarging();

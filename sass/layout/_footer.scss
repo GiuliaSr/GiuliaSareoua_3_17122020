@@ -1,0 +1,27 @@
+/*FOOTER*/
+.omf-footer {
+    @include footer;
+    &__contentbox {
+        @include contentmarging();
+        padding: 1rem 0;
+    }
+    &__heading {
+        @include logo;
+        margin: 0;
+    }
+    &__lign {
+        display: flex;
+        align-items: center;
+        height: 2rem;
+    }
+    &__icon {
+        width: 1rem;
+        margin-right: 1rem;
+    }
+    &__text {
+        height: 2rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+}

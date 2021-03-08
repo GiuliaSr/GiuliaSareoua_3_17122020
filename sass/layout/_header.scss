@@ -1,0 +1,9 @@
+/*HEADER*/
+.omf-header {
+    @include flex-center;
+    &__logo {
+        @include logo;
+        font-size: 2rem;
+        margin: 1rem;
+    }
+}
