@@ -7,6 +7,96 @@ body {
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*FOOTER*/
+.omf-footer {
+  background-color: #323232;
+  color: #fff;
+}
+
+.omf-footer__contentbox {
+  margin: 0 2rem;
+  padding: 1rem 0;
+}
+
+.omf-footer__heading {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+}
+
+.omf-footer__lign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2rem;
+}
+
+.omf-footer__icon {
+  width: 1rem;
+  margin-right: 1rem;
+}
+
+.omf-footer__text {
+  height: 2rem;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heart-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.heart-container:hover .heart-container--bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.heart-container:hover > .heart-container--nobg {
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  opacity: 0;
+}
+
+.heart-container--nobg {
+  position: absolute;
+  opacity: 1;
+}
+
+.heart-container--bg {
+  position: absolute;
+  opacity: 0;
+}
+
 .menus-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +104,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 1rem;
+  margin: 0 2rem;
 }
 
 .menus-header__logo {
@@ -32,11 +122,46 @@ body {
   width: 100%;
 }
 
-.menus-header__icon {
+.menus-header__arrow {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   font-size: 1.5rem;
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  -webkit-box-shadow: 1px 1px 5px 1px #cfcfcf;
+          box-shadow: 1px 1px 5px 1px #cfcfcf;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 1px 1px 5px 1px #505050;
+          box-shadow: 1px 1px 5px 1px #505050;
 }
 
 .menus-banner__img {
@@ -54,7 +179,7 @@ body {
 }
 
 .menus-contentbox {
-  margin: 0 1rem;
+  margin: 0 2rem;
   padding-bottom: 2rem;
 }
 
@@ -82,13 +207,15 @@ body {
 }
 
 .menus-contentbox__contentbox {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: row;
+          flex-flow: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -107,6 +234,13 @@ body {
   margin-right: -1rem;
 }
 
+.menus-contentbox__contentbox:hover .menus-contentbox__description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
 .menus-contentbox__contentbox:hover .menus-contentbox--confirmation i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -117,6 +251,12 @@ body {
   font-weight: bold;
   margin: 0;
   padding-bottom: 0.5rem;
+  max-width: 270px;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menus-contentbox__descriptionbox {
@@ -132,6 +272,12 @@ body {
 .menus-contentbox__description {
   margin: 0;
   font-weight: 100;
+  max-width: 270px;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menus-contentbox__right {
@@ -159,6 +305,8 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  background-color: #fff;
+  width: 2rem;
 }
 
 .menus-contentbox--confirmation {
@@ -186,44 +334,12 @@ body {
           transition-duration: 1s;
 }
 
-.menus-contentbox__contentbox .omf-footer {
-  background-color: #323232;
-  color: #fff;
-}
-
-.menus-contentbox__contentbox .omf-footer__contentbox {
-  margin: 0 1rem;
-  padding: 1rem 0;
-}
-
-.menus-contentbox__contentbox .omf-footer__heading {
-  font-family: "Shrikhand", cursive;
-  margin: 0;
-}
-
-.menus-contentbox__contentbox .omf-footer__lign {
+.omf-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 2rem;
-}
-
-.menus-contentbox__contentbox .omf-footer__icon {
-  width: 1rem;
-  margin-right: 1rem;
-}
-
-.menus-contentbox__contentbox .omf-footer__text {
-  height: 2rem;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=menu.css.map */

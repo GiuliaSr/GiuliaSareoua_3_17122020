@@ -1,0 +1,16 @@
+.btn {
+    @include subtitle;
+    @include resa-flexstyle;
+    @include contentmarging;
+    background: linear-gradient($second, $primary);
+    color: #fff;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    box-shadow: 1px 1px 5px 1px #cfcfcf;
+    transition: all 250ms;
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
+    }
+}

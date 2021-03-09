@@ -1,0 +1,15 @@
+.menus-header {
+    display: flex;
+    align-items: center;
+    @include contentmarging;
+    &__logo {
+        @include logo;
+        @include flex-center;
+        font-size: 2rem;
+        width: 100%;
+    }
+    &__arrow {
+        justify-content: flex-start;
+        font-size: 1.5rem;
+    }
+}

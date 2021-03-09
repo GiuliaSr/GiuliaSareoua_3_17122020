@@ -73,6 +73,84 @@ a {
           align-items: center;
 }
 
+.btn {
+  font-size: 1rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  -webkit-box-shadow: 1px 1px 5px 1px #cfcfcf;
+          box-shadow: 1px 1px 5px 1px #cfcfcf;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 1px 1px 5px 1px #505050;
+          box-shadow: 1px 1px 5px 1px #505050;
+}
+
+.heart-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.heart-container:hover .heart-container--bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.heart-container:hover > .heart-container--nobg {
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  opacity: 0;
+}
+
+.heart-container--nobg {
+  position: absolute;
+  opacity: 1;
+}
+
+.heart-container--bg {
+  position: absolute;
+  opacity: 0;
+}
+
 /*SECTION1*/
 .omf-resa {
   background-color: #f7f7f7;
@@ -164,27 +242,6 @@ a {
   font-weight: normal;
   font-size: 1rem;
   text-align: center;
-}
-
-.omf-resa__btn {
-  font-size: 1rem;
-  font-weight: bold;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
-  color: #fff;
-  border-radius: 2rem;
-  padding: 0 1rem;
-  margin: 1rem 0;
-  -webkit-box-shadow: 1px 1px 5px 1px #cfcfcf;
-          box-shadow: 1px 1px 5px 1px #cfcfcf;
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
-}
-
-.omf-resa__btn:hover {
-  opacity: 0.9;
-  -webkit-box-shadow: 1px 1px 5px 1px #505050;
-          box-shadow: 1px 1px 5px 1px #505050;
 }
 
 /*SECTION2*/
@@ -348,28 +405,6 @@ a {
   font-weight: bold;
   font-weight: normal;
   margin: 0;
-}
-
-.omf-menus__like:hover .omf-menus__like--bg {
-  -webkit-transition: opacity 250ms;
-  transition: opacity 250ms;
-  opacity: 1;
-}
-
-.omf-menus__like:hover.omf-menus__like--nobg {
-  opacity: 0;
-}
-
-.omf-menus__like--bg {
-  opacity: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  background: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
-}
-
-.omf-menus__like--nobg {
-  opacity: 1;
-  position: absolute;
 }
 
 .omf-menus img {

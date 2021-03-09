@@ -1,0 +1,31 @@
+.heart-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: opacity 1s;
+
+    &:hover {
+        & .heart-container--bg {
+            background: linear-gradient($primary, $second);
+            transition: all 1s;
+            opacity: 1;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        > .heart-container--nobg {
+            transition: all 250ms;
+            opacity: 0;
+        }
+    }
+    &--nobg {
+        position: absolute;
+        opacity: 1;
+    }
+    &--bg {
+        position: absolute;
+        opacity: 0;
+    }
+}
