@@ -310,6 +310,26 @@ a {
   height: inherit;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
+  counter-reset: countlist 1;
+}
+
+.fonct-contentbox::before {
+  counter-increment: countlist 1;
+  content: "";
+  background-color: #9356dc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
 }
 
 .fonct-contentbox:hover {

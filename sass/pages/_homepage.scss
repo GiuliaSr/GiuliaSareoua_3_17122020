@@ -72,6 +72,17 @@
     width: 80%;
     height: inherit;
     transition: all 0.25s;
+    counter-reset: countlist 1;
+    &::before {
+        counter-increment: countlist 1;
+        content: "";
+        background-color: $primary;
+        @include flex-center;
+        color: #fff;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+    }
     &:hover {
         background-color: lighten($color: $primary, $amount: 35);
     }
