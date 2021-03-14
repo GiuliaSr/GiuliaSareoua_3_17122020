@@ -4,19 +4,19 @@
     justify-content: flex-end;
     align-items: center;
     font-size: 1.5rem;
-    transition: opacity 1s;
+    background-color: white;
 
     &:hover {
         & .heart-container--bg {
             background: linear-gradient($primary, $second);
-            transition: all 1s;
+            transition: all 0.5s ease-in-out;
             opacity: 1;
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
         }
         > .heart-container--nobg {
-            transition: all 250ms;
+            transition: opacity 1s;
             opacity: 0;
         }
     }

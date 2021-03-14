@@ -38,27 +38,62 @@
     }
 }
 /*SECTION2*/
+
 .omf-fonct {
     display: flex;
     flex-flow: column wrap;
-    @include contentmarging();
+    counter-reset: numbers;
+    @include contentmarging;
     &__heading {
         @include heading-sections;
     }
+    &__container {
+        display: flex;
+
+        padding: 0;
+        margin-left: 0.75rem;
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+            width: 100%;
+            justify-content: space-between;
+        }
+        @media screen and (min-width: 480px) and (max-width: 1099px) {
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+        @media screen and (min-width: 1100px) {
+            justify-content: space-between;
+        }
+    }
+
     &__wrapper {
-        @include flex-center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 2rem;
         height: 4rem;
-    }
-    &__number-box {
-        background-color: $primary;
-        @include flex-center;
-        color: #fff;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 1rem;
-        margin-right: -1rem;
-        z-index: 1;
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+        @media screen and (min-width: 480px) and (max-width: 1099px) {
+            width: 30%;
+            min-width: 13rem;
+        }
+        @media screen and (min-width: 1100px) {
+            width: 30%;
+        }
+        &::before {
+            counter-increment: numbers;
+            content: counter(numbers) "";
+            background-color: $primary;
+            @include flex-center;
+            color: #fff;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 1rem;
+            position: absolute;
+            margin-left: -0.75rem;
+        }
     }
 }
 
@@ -69,20 +104,10 @@
     box-shadow: 1px 1px 5px 1px #cfcfcf;
     border-radius: 1rem;
     padding: 0 2rem;
-    width: 80%;
+    width: 100%;
     height: inherit;
     transition: all 0.25s;
     counter-reset: countlist 1;
-    &::before {
-        counter-increment: countlist 1;
-        content: "";
-        background-color: $primary;
-        @include flex-center;
-        color: #fff;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 1rem;
-    }
     &:hover {
         background-color: lighten($color: $primary, $amount: 35);
     }
@@ -99,14 +124,31 @@
 .fonct-contentbox:hover .fonct-contentbox__icon {
     color: $primary;
 }
+
 /*SECTION3*/
 .omf-menus {
     background-color: $backgroundlight;
     padding: 1rem 0;
+    @media screen and (min-width: 480px) and (max-width: 1099px) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    @media screen and (min-width: 1100px) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
     &__heading {
         @include heading-sections;
         @include contentmarging();
         padding: 1rem 0;
+        @media screen and (min-width: 480px) and (max-width: 1099px) {
+            width: 100%;
+        }
+        @media screen and (min-width: 1100px) {
+            width: 100%;
+        }
     }
     &__contentbox {
         @include contentmarging();
@@ -114,12 +156,20 @@
         margin-bottom: 2rem;
         background-color: #fff;
         border-radius: 1rem;
-        height: 25%;
         overflow: hidden;
         position: relative;
+        @media screen and (min-width: 480px) and (max-width: 1099px) {
+            width: 40%;
+        }
+        @media screen and (min-width: 1100px) {
+            width: 40%;
+        }
     }
     &__img {
         height: 10rem;
+        @media screen and (min-width: 1100px) {
+            height: 15rem;
+        }
     }
     &__img span {
         background-color: $third;
@@ -136,10 +186,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (min-width: 1100px) {
+            height: 4rem;
+            margin: 1rem;
+        }
     }
     &__textwrap {
         display: flex;
         flex-flow: column wrap;
+        @media screen and (min-width: 480px) and (max-width: 1099px) {
+            height: inherit;
+            display: flex;
+            justify-content: space-around;
+        }
+        @media screen and (min-width: 1100px) {
+            height: inherit;
+            display: flex;
+            justify-content: space-around;
+        }
     }
     &__title {
         @include subtitle;

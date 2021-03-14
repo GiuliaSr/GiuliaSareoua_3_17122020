@@ -51,32 +51,68 @@
 
             <section class="omf-fonct">
                 <h1 class="omf-fonct__heading">Fonctionnement</h1>
-                <ol class="omf-fonct__wrapper">
-                    <li class="fonct-contentbox">
+                <ol class="omf-fonct__container">
+                    <li class="omf-fonct__wrapper">
+                        <div class="fonct-contentbox">
+                            <i
+                                class="fas fa-mobile-alt fonct-contentbox__icon"
+                            ></i>
+                            <h3 class="fonct-contentbox__content">
+                                Choisissez un restaurant
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="omf-fonct__wrapper">
+                        <div class="fonct-contentbox">
+                            <i
+                                class="fas fa-list-ul fonct-contentbox__icon"
+                            ></i>
+
+                            <h3 class="fonct-contentbox__content">
+                                Composez votre menu
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="omf-fonct__wrapper">
+                        <div class="fonct-contentbox">
+                            <i class="fas fa-store fonct-contentbox__icon"></i>
+
+                            <h3 class="fonct-contentbox__content">
+                                Dégustez au restaurant
+                            </h3>
+                        </div>
+                    </li>
+                </ol>
+                <!--
+                <div class="omf-fonct__wrapper">
+                    <div class="fonct-contentbox">
                         <i class="fas fa-mobile-alt fonct-contentbox__icon"></i>
                         <h3 class="fonct-contentbox__content">
                             Choisissez un restaurant
                         </h3>
-                    </li>
-                    <li class="fonct-contentbox">
-                        <i
-                            class="fas fa-list-ul"
-                            class="fonct-contentbox__icon"
-                        ></i>
+                    </div>
+                </div>
+                <div class="omf-fonct__wrapper">
+                    <div class="fonct-contentbox">
+                        <div class="fonct-contentbox__icon">
+                            <i class="fas fa-list-ul"></i>
+                        </div>
                         <h3 class="fonct-contentbox__content">
                             Composez votre menu
                         </h3>
-                    </li>
-                    <li class="fonct-contentbox">
-                        <i
-                            class="fas fa-store"
-                            class="fonct-contentbox__icon"
-                        ></i>
+                    </div>
+                </div>
+                <div class="omf-fonct__wrapper">
+                    <div class="fonct-contentbox">
+                        <div class="fonct-contentbox__icon">
+                            <i class="fas fa-store"></i>
+                        </div>
                         <h3 class="fonct-contentbox__content">
                             Dégustez au restaurant
                         </h3>
-                    </li>
-                </ol>
+                    </div>
+                </div>
+                -->
             </section>
 
             <section class="omf-menus">
@@ -99,9 +135,11 @@
                             </div>
                             <div class="heart-container">
                                 <i
-                                    class="far fa-heart heart-container--nobg"
+                                    class="far fa-heart heart-container__like heart-container--nobg"
                                 ></i>
-                                <i class="fas fa-heart heart-container--bg"></i>
+                                <i
+                                    class="fas fa-heart heart-container__like heart-container--bg"
+                                ></i>
                             </div>
                         </div>
                     </a>
@@ -192,7 +230,11 @@
                         <p>Devenir partenaire</p>
                     </div>
                     <p class="omf-footer__text">Mentions légales</p>
-                    <p class="omf-footer__text">Contact</p>
+                    <a
+                        href="mailto: ohmyfood@contact.fr"
+                        class="omf-footer__text"
+                        >Contact</a
+                    >
                 </div>
             </footer>
         </main>

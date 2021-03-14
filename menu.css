@@ -18,14 +18,74 @@ a {
   color: #fff;
 }
 
+@media screen and (min-width: 480px) and (max-width: 1099px) {
+  .omf-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .omf-footer {
+    padding-bottom: 2rem;
+  }
+}
+
 .omf-footer__contentbox {
   margin: 0 2rem;
   padding: 1rem 0;
 }
 
+@media screen and (min-width: 480px) and (max-width: 1099px) {
+  .omf-footer__contentbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .omf-footer__contentbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 .omf-footer__heading {
   font-family: "Shrikhand", cursive;
   margin: 0;
+}
+
+@media screen and (min-width: 1100px) {
+  .omf-footer__heading {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 2rem;
+  }
 }
 
 .omf-footer__lign {
@@ -52,6 +112,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: inherit;
 }
 
 .heart-container {
@@ -66,15 +127,14 @@ a {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.5rem;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  background-color: white;
 }
 
 .heart-container:hover .heart-container--bg {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(#9356dc, #ff79da);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 1;
   background-clip: text;
   -webkit-background-clip: text;
@@ -82,8 +142,8 @@ a {
 }
 
 .heart-container:hover > .heart-container--nobg {
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
   opacity: 0;
 }
 
