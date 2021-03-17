@@ -7,9 +7,11 @@
     background-color: white;
 
     &:hover {
+        cursor: pointer;
         & .heart-container--bg {
             background: linear-gradient($primary, $second);
             transition: all 0.5s ease-in-out;
+            transform: scale(1);
             opacity: 1;
             background-clip: text;
             -webkit-background-clip: text;
@@ -26,6 +28,7 @@
     }
     &--bg {
         position: absolute;
-        opacity: 0;
+       opacity: 0;
+
     }
 }

@@ -10,6 +10,7 @@
     &__img {
         width: 100%;
         object-fit: cover;
+        height: 20rem;
     }
 }
 
@@ -20,28 +21,62 @@
     position: relative;
     margin-top: -4rem;
 }
+
 .menus-contentbox {
     @include contentmarging;
-    padding-bottom: 2rem;
 
     &__heading {
         @include logo;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-size: 0.9rem;     
     }
-
     &__category {
         text-transform: uppercase;
         font-weight: normal;
         font-size: 1rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 3px solid $third;
-        width: 3rem;
         font-weight: 100;
+        @media screen and (min-width: 1100px){
+            width: 100%;
+        }
+        &::after {
+            content: "";
+            background-color: $third;
+            width: 3rem;
+            height: 0.2rem;
+            display: flex;
+            margin: 0.5rem 0;
+        }
     }
-    &__contentbox {
+    &__entree  {
+        @media screen and (min-width: 1100px){
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+    }
+    &__meal{
+        @media screen and (min-width: 1100px){
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            /*.menus-contentbox__contentbox{
+                margin-right: 5%
+            }*/
+        }       
+    }
+    &__desert{
+        @media screen and (min-width: 1100px){
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+    }
+}
+.card {
         box-sizing: border-box;
+        width: 100%;
         display: flex;
         flex-flow: row;
         justify-content: space-between;
@@ -50,68 +85,87 @@
         background-color: #fff;
         border-radius: 1rem;
         padding: 1rem;
-        overflow: hidden;
-
+        @include ellipsis;
+        @media screen and (min-width: 1100px){
+            width: 30%;       
+        }
         &:hover {
-            .menus-contentbox__right {
-                transform: translateX(-5rem);
-                margin-right: -1rem;
+            cursor: pointer;
+           &  .card--confirmation{
+           transform: translate(0);
+                & i{
+                transform: rotate(-360deg);
+                    }
             }
-            .menus-contentbox__description {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                width: 60%;
+            & .card__price{
+                transform: translate(-1rem);
             }
-        }
-        &:hover .menus-contentbox--confirmation i {
-            transform: rotate(360deg);
-        }
-    }
+            & .card__description {
+                @include ellipsis;
+             width: 80%;  
+             
+              
+                
+            }
+           & .card__title {
+                @include ellipsis;
+                width: 80%;
+                
+             
+            }     
+  }
     &__title {
+        transition: all 1s ease-in-out;
         @include subtitle;
         margin: 0;
         padding-bottom: 0.5rem;
-        max-width: 270px;
-        transition: all 250ms;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        @include ellipsis;
+        width: 100%;
+     
+        
     }
     &__descriptionbox {
+        @include ellipsis;
         display: flex;
         flex-flow: column wrap;
+        width: 100%;
+        
+       
+        
+     
     }
     &__description {
         margin: 0;
         font-weight: 100;
-        max-width: 270px;
-        transition: all 250ms;
+       transition: all 1s;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        width: 100%;
+        
     }
-    &__right {
-        display: flex;
-        flex-flow: row wrap;
-        transition: all ease-in-out 0.5s;
-    }
+    
     &__price {
         @include subtitle;
         margin: 0;
+        transform: translate(1rem);
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        background-color: #fff;
-        width: 2rem;
+        transition: transform 1s ease-in-out;
+        transition-delay: 100ms;
+        
     }
     &--confirmation {
-        margin: -1rem -5rem -1rem 1rem;
-        width: 4rem;
+       transform: translate(5rem);
+        width: 5rem;
+        padding: 0;
+        margin: -1rem;
         background-color: $third;
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: transform 1s ease-in-out;
 
         & i {
             background-color: #fff;
@@ -119,9 +173,15 @@
             border: 1px solid #fff;
             border-radius: 2rem;
             padding: 0.5rem;
-            transition-duration: 1s;
+            transition: 1s ease-in-out ;
+           
         }
     }
+
+.btn{
+    margin-bottom: 1rem;
+
+}
 }
 
 .omf-footer {

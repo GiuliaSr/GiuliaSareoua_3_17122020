@@ -1,0 +1,84 @@
+$anim-dur: 1000ms;
+$num-bars: 3;
+$anim-delay: $anim-dur / $num-bars;
+@mixin colors2 {
+    .load__bar--1{
+        background-color: $third;
+    }
+    .load__bar--2{
+        background-color: $primary;
+    }
+    .load__bar--3{
+        background-color: $second;
+    }
+}
+.container{
+    background-color: rgba($color: #fff, $alpha: 0.7);
+    width: 100%;
+    height: 100%;  
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    animation: loader 2s ease-in-out;
+    
+    
+}
+.load{
+    
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: $size*10;
+    height: $size*7.5;
+    display: flex;
+    justify-content: space-evenly;
+  
+    &__bar{
+        height: 100%;
+        width: $size;
+        animation: bars $anim-dur  500ms ease-in-out ;
+        animation-iteration-count: 2;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: both;
+      
+        &--1{
+            background-color: $primary;
+            animation-delay: 100ms;
+           
+        }
+        &--2{
+            background-color: $second;
+            animation-delay: 250ms;
+           
+        }
+        &--3{
+            background-color: $third;
+            animation-delay: 300ms;
+           
+        }
+    }
+    
+   
+}
+
+@keyframes bars{
+    0%{ 
+        transform: scaleY(0.5);
+    
+    }
+    100%{
+        transform: scaleY(1);
+    
+    }
+   
+    
+}
+@keyframes loader{
+    100%{
+        opacity: 1;
+        z-index: 1;
+    }
+}

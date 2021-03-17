@@ -34,3 +34,8 @@
 @mixin gradient-dark {
     background: linear-gradient($second, $primary);
 }
+@mixin ellipsis {
+    overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+}
