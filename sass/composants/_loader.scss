@@ -40,7 +40,7 @@ $anim-delay: $anim-dur / $num-bars;
         height: 100%;
         width: $size;
         animation: bars $anim-dur  500ms ease-in-out ;
-        animation-iteration-count: 2;
+        animation-iteration-count: 3;
         animation-direction: alternate-reverse;
         animation-fill-mode: both;
       

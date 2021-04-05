@@ -127,7 +127,23 @@ a {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.5rem;
-  background-color: white;
+}
+
+.heart-container--nobg {
+  position: absolute;
+  border: 1px solid transparent;
+}
+
+.heart-container--bg {
+  position: absolute;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  border: 1px solid transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .heart-container:hover {
@@ -135,34 +151,59 @@ a {
 }
 
 .heart-container:hover .heart-container--bg {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  background: linear-gradient(#9356dc, #ff79da);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   -webkit-transform: scale(1);
           transform: scale(1);
-  opacity: 1;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  position: inherit;
 }
 
 .heart-container:hover > .heart-container--nobg {
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  opacity: 0;
+  color: transparent;
+  -webkit-transition: 650ms;
+  transition: 650ms;
 }
 
-.heart-container--nobg {
-  position: absolute;
-  opacity: 1;
+/*
+.heart-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5rem;
+    
+    &--nobg {
+        position: absolute;
+        font-size: 25px;
+        background-color: transparent;
+        z-index: 2;
+        position: absolute;
+        transition-duration: 650ms;
+        &:hover{
+            color: transparent;
+        }
+        &:hover + .heart-container--bg{
+            transform: scale(1);
+        }
+    }
+    &--bg{
+        background: -moz-linear-gradient(360deg, $primary, $second);
+        background: -webkit-linear-gradient(360deg, $primary, $second);
+        background: linear-gradient(360deg, $primary, $second);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 25px;
+        transform: scale(0);
+        transition: transform 500ms;
+        position: absolute;
+        z-index: 1;
+    }
 }
-
-.heart-container--bg {
-  position: absolute;
-  opacity: 0;
-}
-
+*/
 .menus-header {
   display: -webkit-box;
   display: -ms-flexbox;
