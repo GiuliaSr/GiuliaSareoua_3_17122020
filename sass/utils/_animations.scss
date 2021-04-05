@@ -1,8 +1,23 @@
-@keyframes text-appear{
+@keyframes text-appear {
     0% {
         opacity: 0;
-      }
-      100% {
+    }
+    100% {
         opacity: 1;
-      }
+    }
+}
+
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes loader {
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
 }
