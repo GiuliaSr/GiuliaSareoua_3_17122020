@@ -1,4 +1,4 @@
-@keyframes text-appear {
+@keyframes appear {
     0% {
         opacity: 0;
     }
@@ -6,18 +6,24 @@
         opacity: 1;
     }
 }
-
-@keyframes bars {
-    0% {
-        transform: scaleY(0.5);
-    }
-    100% {
-        transform: scaleY(1);
+@keyframes scale {
+    50% {
+        transform: scale(0.5);
     }
 }
-@keyframes loader {
+
+@keyframes translate {
+    50% {
+        transform: translateY(-1rem);
+    }
+}
+@keyframes load {
+    0% {
+        opacity: 1;
+        z-index: 1;
+    }
     100% {
-        opacity: 0;
-        z-index: -1;
+        opacity: 1;
+        z-index: 1;
     }
 }

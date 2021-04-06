@@ -25,22 +25,23 @@
 
 .menus-contentbox {
     @include contentmarging;
-
+    animation: appear 1s both;
     &__heading {
         @include logo;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 0.9rem;     
+        font-size: 0.9rem;
     }
     &__category {
         text-transform: uppercase;
         font-weight: normal;
         font-size: 1rem;
         font-weight: 100;
-        @media screen and (min-width: 1100px){
+        @media screen and (min-width: 1100px) {
             width: 100%;
         }
+
         &::after {
             content: "";
             background-color: $third;
@@ -50,106 +51,100 @@
             margin: 0.5rem 0;
         }
     }
-    &__entree  {
-        @media screen and (min-width: 1100px){
+    &__entree {
+        @media screen and (min-width: 1100px) {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
-
         }
     }
-    &__meal{
-        @media screen and (min-width: 1100px){
+    &__meal {
+        @media screen and (min-width: 1100px) {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
             /*.menus-contentbox__contentbox{
                 margin-right: 5%
             }*/
-        }       
+        }
     }
-    &__desert{
-        @media screen and (min-width: 1100px){
+    &__desert {
+        @media screen and (min-width: 1100px) {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
         }
     }
 }
+
 .card {
-        animation: text-appear 1s;
-        opacity: 1;
-        box-sizing: border-box;
-        width: 100%;
-        display: flex;
-        flex-flow: row;
-        justify-content: space-between;
-        box-shadow: 1px 1px 5px 1px #cfcfcf;
-        margin-bottom: 1rem;
-        background-color: #fff;
-        border-radius: 1rem;
-        padding: 1rem;
-        @include ellipsis;
-        @media screen and (min-width: 1100px){
-            width: 30%;       
+    opacity: 0;
+    @for $i from 1 through 9 {
+        &--#{$i} {
+            animation-delay: 200ms * $i;
         }
-        
-        &:hover {
-            cursor: pointer;
-           &  .card--confirmation{
-           transform: translate(0);
-                & i{
+    }
+    animation: appear 800ms both ease-in-out;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px 1px #cfcfcf;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    @include ellipsis;
+
+    @media screen and (min-width: 1100px) {
+        width: 30%;
+    }
+
+    &:hover {
+        cursor: pointer;
+        & .card--confirmation {
+            transform: translate(0);
+            & i {
                 transform: rotate(-360deg);
-                    }
             }
-            & .card__price{
-                transform: translate(-1rem);
-            }
-            & .card__description {
-                @include ellipsis;
-             width: 80%;  
-             
-              
-                
-            }
-           & .card__title {
-                @include ellipsis;
-                width: 80%;
-                
-             
-            }     
-  }
+        }
+        & .card__price {
+            transform: translate(-1rem);
+        }
+        & .card__description {
+            @include ellipsis;
+            width: 80%;
+        }
+        & .card__title {
+            @include ellipsis;
+            width: 80%;
+        }
+    }
     &__title {
-        transition: all 1s ease-in-out;
+        transition: all 500ms ease-in-out 80ms;
         @include subtitle;
         margin: 0;
         padding-bottom: 0.5rem;
         @include ellipsis;
         width: 100%;
-     
-        
     }
     &__descriptionbox {
         @include ellipsis;
         display: flex;
         flex-flow: column wrap;
         width: 100%;
-        
-       
-        
-     
     }
     &__description {
         margin: 0;
         font-weight: 100;
-       transition: all 1s;
+        transition: all 500ms 100ms;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
         width: 100%;
-        
     }
-    
+
     &__price {
         @include subtitle;
         margin: 0;
@@ -157,12 +152,11 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        transition: transform 1s ease-in-out;
-        transition-delay: 100ms;
-        
+        transition: transform 500ms ease-in-out;
+        transition-delay: 80ms;
     }
     &--confirmation {
-       transform: translate(5rem);
+        transform: translate(5rem);
         width: 5rem;
         padding: 0;
         margin: -1rem;
@@ -170,7 +164,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: transform 1s ease-in-out;
+        transition: transform 500ms ease-in-out;
 
         & i {
             background-color: #fff;
@@ -178,18 +172,21 @@
             border: 1px solid #fff;
             border-radius: 2rem;
             padding: 0.5rem;
-            transition: 1s ease-in-out ;
-           
+            transition: 500ms ease-in-out;
         }
     }
 
-.btn{
-    margin-bottom: 1rem;
-
-}
+    .btn {
+        margin-bottom: 1rem;
+    }
 }
 
 .omf-footer {
     display: flex;
     justify-content: center;
+}
+@for $i from 0 to 3 {
+    .menus-contentbox--#{$i} {
+        animation-delay: #{$i/3};
+    }
 }

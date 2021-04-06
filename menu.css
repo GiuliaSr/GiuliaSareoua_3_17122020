@@ -284,7 +284,7 @@ a {
           justify-content: center;
 }
 
-@-webkit-keyframes text-appear {
+@-webkit-keyframes appear {
   0% {
     opacity: 0;
   }
@@ -293,7 +293,7 @@ a {
   }
 }
 
-@keyframes text-appear {
+@keyframes appear {
   0% {
     opacity: 0;
   }
@@ -302,39 +302,53 @@ a {
   }
 }
 
-@-webkit-keyframes bars {
+@-webkit-keyframes scale {
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes scale {
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@-webkit-keyframes translate {
+  50% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+}
+
+@keyframes translate {
+  50% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+}
+
+@-webkit-keyframes load {
   0% {
-    -webkit-transform: scaleY(0.5);
-            transform: scaleY(0.5);
+    opacity: 1;
+    z-index: 1;
   }
   100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    opacity: 1;
+    z-index: 1;
   }
 }
 
-@keyframes bars {
+@keyframes load {
   0% {
-    -webkit-transform: scaleY(0.5);
-            transform: scaleY(0.5);
+    opacity: 1;
+    z-index: 1;
   }
   100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
-
-@-webkit-keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -1;
+    opacity: 1;
+    z-index: 1;
   }
 }
 
@@ -355,6 +369,8 @@ a {
 
 .menus-contentbox {
   margin: 0 2rem;
+  -webkit-animation: appear 1s both;
+          animation: appear 1s both;
 }
 
 .menus-contentbox__heading {
@@ -444,9 +460,9 @@ a {
 }
 
 .card {
-  -webkit-animation: text-appear 1s;
-          animation: text-appear 1s;
-  opacity: 1;
+  opacity: 0;
+  -webkit-animation: appear 800ms both ease-in-out;
+          animation: appear 800ms both ease-in-out;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -469,6 +485,51 @@ a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.card--1 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.card--2 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.card--3 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.card--4 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.card--5 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+
+.card--6 {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+
+.card--7 {
+  -webkit-animation-delay: 1400ms;
+          animation-delay: 1400ms;
+}
+
+.card--8 {
+  -webkit-animation-delay: 1600ms;
+          animation-delay: 1600ms;
+}
+
+.card--9 {
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
 }
 
 @media screen and (min-width: 1100px) {
@@ -511,8 +572,8 @@ a {
 }
 
 .card__title {
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 500ms ease-in-out 80ms;
+  transition: all 500ms ease-in-out 80ms;
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
@@ -540,8 +601,8 @@ a {
 .card__description {
   margin: 0;
   font-weight: 100;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 500ms 100ms;
+  transition: all 500ms 100ms;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -563,12 +624,12 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
-  -webkit-transition-delay: 100ms;
-          transition-delay: 100ms;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition-delay: 80ms;
+          transition-delay: 80ms;
 }
 
 .card--confirmation {
@@ -587,10 +648,10 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 .card--confirmation i {
@@ -599,8 +660,8 @@ a {
   border: 1px solid #fff;
   border-radius: 2rem;
   padding: 0.5rem;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
 .card .btn {
@@ -614,5 +675,20 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.menus-contentbox--0 {
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+.menus-contentbox--1 {
+  -webkit-animation-delay: 0.33333;
+          animation-delay: 0.33333;
+}
+
+.menus-contentbox--2 {
+  -webkit-animation-delay: 0.66667;
+          animation-delay: 0.66667;
 }
 /*# sourceMappingURL=menu.css.map */
