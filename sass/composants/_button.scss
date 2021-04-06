@@ -1,4 +1,4 @@
-.btn .btn__content{
+.btn .btn__content {
     @include subtitle;
     @include resa-flexstyle;
     @include contentmarging;
@@ -11,14 +11,27 @@
     transition: all 250ms;
     border: 0px solid transparent;
     height: 3rem;
-    &:hover {
+    &:active {
         cursor: pointer;
         opacity: 0.9;
         box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
     }
-    
+    @media screen and (min-width: 480px) and (max-width: 1099px) {
+        &:active {
+            cursor: pointer;
+            opacity: 0.9;
+            box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
+        }
+    }
+    @media screen and (min-width: 1100px) {
+        &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+            box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
+        }
+    }
 }
-.btn{
+.btn {
     width: 100%;
     display: flex;
     justify-content: center;

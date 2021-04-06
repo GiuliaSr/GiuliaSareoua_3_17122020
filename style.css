@@ -37,7 +37,7 @@ a {
   color: #fff;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 481px) and (max-width: 1099px) {
   .omf-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -59,7 +59,7 @@ a {
   padding: 1rem 0;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 481px) and (max-width: 1099px) {
   .omf-footer__contentbox {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -165,11 +165,29 @@ a {
   height: 3rem;
 }
 
-.btn .btn__content:hover {
+.btn .btn__content:active {
   cursor: pointer;
   opacity: 0.9;
   -webkit-box-shadow: 1px 1px 5px 1px #505050;
           box-shadow: 1px 1px 5px 1px #505050;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1099px) {
+  .btn .btn__content:active {
+    cursor: pointer;
+    opacity: 0.9;
+    -webkit-box-shadow: 1px 1px 5px 1px #505050;
+            box-shadow: 1px 1px 5px 1px #505050;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .btn .btn__content:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    -webkit-box-shadow: 1px 1px 5px 1px #505050;
+            box-shadow: 1px 1px 5px 1px #505050;
+  }
 }
 
 .btn {
@@ -374,7 +392,10 @@ a {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   counter-reset: numbers;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0 2rem;
+  margin-right: 3rem;
 }
 
 .omf-fonct__heading {
@@ -387,7 +408,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  margin-left: 0.75rem;
+  margin-left: 1rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -403,7 +424,7 @@ a {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 481px) and (max-width: 1099px) {
   .omf-fonct__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -443,10 +464,10 @@ a {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 481px) and (max-width: 1099px) {
   .omf-fonct__wrapper {
-    width: 30%;
-    min-width: 13rem;
+    width: 40%;
+    margin-left: 2rem;
   }
 }
 
@@ -474,7 +495,7 @@ a {
   height: 2rem;
   border-radius: 1rem;
   position: absolute;
-  margin-left: -0.75rem;
+  margin-left: -1rem;
 }
 
 .fonct-contentbox {
@@ -521,7 +542,7 @@ a {
   padding: 1rem 0;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 481px) and (max-width: 1099px) {
   .omf-menus {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -558,7 +579,7 @@ a {
   padding: 1rem 0;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 481px) and (max-width: 1099px) {
   .omf-menus__heading {
     width: 100%;
   }
@@ -581,7 +602,7 @@ a {
   position: relative;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 481px) and (max-width: 1099px) {
   .omf-menus__contentbox {
     width: 40%;
   }
@@ -644,7 +665,7 @@ a {
           flex-flow: column wrap;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 481px) and (max-width: 1099px) {
   .omf-menus__textwrap {
     height: inherit;
     display: -webkit-box;
@@ -726,6 +747,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
+  position: fixed;
 }
 
 .load__bar {

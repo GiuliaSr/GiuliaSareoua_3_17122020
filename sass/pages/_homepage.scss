@@ -9,11 +9,9 @@
         background-color: #ededed;
         @include flex-center;
     }
-
     &__towncontentbox {
         @include flex-center;
         justify-content: flex-start;
-
         width: 11rem;
     }
     &__town-content {
@@ -23,8 +21,8 @@
         justify-content: center;
     }
     &__contentbox {
-        @include resa-flexstyle();
-        @include contentmarging();
+        @include resa-flexstyle;
+        @include contentmarging;
     }
     &__heading {
         @include heading-sections;
@@ -43,25 +41,27 @@
     display: flex;
     flex-flow: column wrap;
     counter-reset: numbers;
+    box-sizing: border-box;
+
     @include contentmarging;
+    margin-right: 3rem;
     &__heading {
         @include heading-sections;
     }
     &__container {
         display: flex;
-
         padding: 0;
-        margin-left: 0.75rem;
-        @media screen and (max-width: 480px) {
+        margin-left: 1rem;
+        @include mobile {
             flex-direction: column;
             width: 100%;
             justify-content: space-between;
         }
-        @media screen and (min-width: 480px) and (max-width: 1099px) {
+        @include tablette {
             flex-flow: row wrap;
             justify-content: space-evenly;
         }
-        @media screen and (min-width: 1100px) {
+        @include desktop {
             justify-content: space-between;
         }
     }
@@ -72,14 +72,14 @@
         align-items: center;
         margin-bottom: 2rem;
         height: 4rem;
-        @media screen and (max-width: 480px) {
+        @include mobile {
             width: 100%;
         }
-        @media screen and (min-width: 480px) and (max-width: 1099px) {
-            width: 30%;
-            min-width: 13rem;
+        @include tablette {
+            width: 40%;
+            margin-left: 2rem;
         }
-        @media screen and (min-width: 1100px) {
+        @include desktop {
             width: 30%;
         }
         &::before {
@@ -92,7 +92,7 @@
             height: 2rem;
             border-radius: 1rem;
             position: absolute;
-            margin-left: -0.75rem;
+            margin-left: -1rem;
         }
     }
 }
@@ -129,12 +129,12 @@
 .omf-menus {
     background-color: $backgroundlight;
     padding: 1rem 0;
-    @media screen and (min-width: 480px) and (max-width: 1099px) {
+    @include tablette {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
     }
-    @media screen and (min-width: 1100px) {
+    @include desktop {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
@@ -143,10 +143,10 @@
         @include heading-sections;
         @include contentmarging();
         padding: 1rem 0;
-        @media screen and (min-width: 480px) and (max-width: 1099px) {
+        @include tablette {
             width: 100%;
         }
-        @media screen and (min-width: 1100px) {
+        @include desktop {
             width: 100%;
         }
     }
@@ -158,16 +158,16 @@
         border-radius: 1rem;
         overflow: hidden;
         position: relative;
-        @media screen and (min-width: 480px) and (max-width: 1099px) {
+        @include tablette {
             width: 40%;
         }
-        @media screen and (min-width: 1100px) {
+        @include desktop {
             width: 40%;
         }
     }
     &__img {
         height: 10rem;
-        @media screen and (min-width: 1100px) {
+        @include desktop {
             height: 15rem;
         }
     }
@@ -186,7 +186,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @media screen and (min-width: 1100px) {
+        @include desktop {
             height: 4rem;
             margin: 1rem;
         }
@@ -194,12 +194,12 @@
     &__textwrap {
         display: flex;
         flex-flow: column wrap;
-        @media screen and (min-width: 480px) and (max-width: 1099px) {
+        @include tablette {
             height: inherit;
             display: flex;
             justify-content: space-around;
         }
-        @media screen and (min-width: 1100px) {
+        @include desktop {
             height: inherit;
             display: flex;
             justify-content: space-around;

@@ -36,6 +36,21 @@
 }
 @mixin ellipsis {
     overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@mixin mobile {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+@mixin tablette {
+    @media screen and (min-width: 481px) and (max-width: 1099px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: desktop )) {
+        @content;
+    }
 }

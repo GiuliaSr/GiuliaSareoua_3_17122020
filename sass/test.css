@@ -18,7 +18,7 @@ a {
   color: #fff;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 481px) and (max-width: 1099px) {
   .omf-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -40,7 +40,7 @@ a {
   padding: 1rem 0;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 481px) and (max-width: 1099px) {
   .omf-footer__contentbox {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -267,11 +267,29 @@ a {
   height: 3rem;
 }
 
-.btn .btn__content:hover {
+.btn .btn__content:active {
   cursor: pointer;
   opacity: 0.9;
   -webkit-box-shadow: 1px 1px 5px 1px #505050;
           box-shadow: 1px 1px 5px 1px #505050;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1099px) {
+  .btn .btn__content:active {
+    cursor: pointer;
+    opacity: 0.9;
+    -webkit-box-shadow: 1px 1px 5px 1px #505050;
+            box-shadow: 1px 1px 5px 1px #505050;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .btn .btn__content:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    -webkit-box-shadow: 1px 1px 5px 1px #505050;
+            box-shadow: 1px 1px 5px 1px #505050;
+  }
 }
 
 .btn {
