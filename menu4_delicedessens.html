@@ -4,11 +4,13 @@
         <meta charset="utf-8" />
         <title>Ohmyfood!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="menu.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap"
             rel="stylesheet"
         />
         <script
@@ -18,102 +20,180 @@
     </head>
     <body>
         <header class="menus-header">
-            <div class="menus-header__icon">
-                <i class="fas fa-arrow-left"></i>
-            </div>
-            <h1 class="menus-header__logo"></h1>
+            <a href="index.html">
+                <i class="menus-header__arrow fas fa-arrow-left"></i>
+            </a>
+            <h1 class="menus-header__logo">Ohmyfood</h1>
         </header>
-        <main>
-            <div class="menus-banner">
-                <img
-                    class="menus-banner__img"
-                    src="images/restaurants/3_alafrancaise.jpg"
-                    alt="Photographie d'un plat du restaurant À la française"
-                />
-            </div>
-            <section class="menus-contentbox">
+        <div class="menus-banner">
+            <img
+                class="menus-banner__img"
+                src="images/restaurants/1_palettedugout.jpg"
+                alt="Photographie d'un plat du restaurant La palette du goût"
+            />
+        </div>
+        <main class="menus-container">
+            <div class="menus-contentbox">
                 <header class="menus-contentbox__heading">
-                    <h1>À la française</h1>
-                    <i class="far fa-heart"></i>
+                    <h1>Le délice des sens</h1>
+                    <div class="heart-container">
+                        <i class="far fa-heart heart-container--nobg"></i>
+                        <i class="fas fa-heart heart-container--bg"></i>
+                    </div>
                 </header>
 
-                <div class="menus-contentbox__entree">
+                <section class="menus-contentbox__entree menus-contentbox--1">
                     <h2 class="menus-contentbox__category">Entrées</h2>
-                    <article class="menus-contentbox__cardbox">
-                        <h2 class="menus-contentbox__title"></h2>
-                        <div class="menus-contentbox__descriptionbox">
-                            <p class="menus-contentbox__description"></p>
-                            <h2 class="menus-contentbox__price"></h2>
+                    <article class="card card--1">
+                        <div class="card__descriptionbox">
+                            <h2 class="card__title">Tartare de thon</h2>
+                            <p class="card__description">Assaisonné au yuzu</p>
                         </div>
-                    </article>
-                    <article class="menus-contentbox__cardbox">
-                        <h2 class="menus-contentbox__title"></h2>
-                        <div class="menus-contentbox__descriptionbox">
-                            <p class="menus-contentbox__description"></p>
-                            <h2 class="menus-contentbox__price"></h2>
-                        </div>
-                    </article>
-                    <article class="menus-contentbox__cardbox">
-                        <h2 class="menus-contentbox__title"></h2>
-                        <div class="menus-contentbox__descriptionbox">
-                            <p class="menus-contentbox__description"></p>
-                            <h2 class="menus-contentbox__price"></h2>
-                        </div>
-                    </article>
-                </div>
 
-                <div class="menus-contentbox__meal">
+                        <div class="card__price">
+                            <p class="card__price">25€</p>
+                        </div>
+                        <div class="card--confirmation">
+                            <i class="fa-check fas"></i>
+                        </div>
+                    </article>
+                    <article class="card card--2">
+                        <div class="card__descriptionbox">
+                            <h2 class="card__title">
+                                Foie gras de canard mi-cuit
+                            </h2>
+                            <p class="card__description">
+                                Et ses copeaux de truffe noire
+                            </p>
+                        </div>
+
+                        <div class="card__price">
+                            <p class="card__price">35€</p>
+                        </div>
+                        <div class="card--confirmation">
+                            <i class="fa-check fas"></i>
+                        </div>
+                    </article>
+                    <article class="card card--3">
+                        <div class="card__descriptionbox">
+                            <h2 class="card__title">Oeuf au plat</h2>
+                            <p class="card__description">
+                                Assaisonné à la truffe sur lit de caviar
+                            </p>
+                        </div>
+
+                        <div class="card__price">
+                            <p class="card__price">20€</p>
+                        </div>
+                        <div class="card--confirmation">
+                            <i class="fa-check fas"></i>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="menus-contentbox__meal menus-contentbox--1">
                     <h2 class="menus-contentbox__category">Plats</h2>
-                    <article class="menus-contentbox__cardbox">
-                        <h2 class="menus-contentbox__title"></h2>
-                        <div class="menus-contentbox__descriptionbox">
-                            <p class="menus-contentbox__description"></p>
-                            <h2 class="menus-contentbox__price"></h2>
-                        </div>
-                    </article>
-                    <article class="menus-contentbox__cardbox">
-                        <h2 class="menus-contentbox__title"></h2>
-                        <div class="menus-contentbox__descriptionbox">
-                            <p class="menus-contentbox__description"></p>
-                            <h2 class="menus-contentbox__price"></h2>
-                        </div>
-                    </article>
-                    <article class="menus-contentbox__cardbox">
-                        <h2 class="menus-contentbox__title"></h2>
-                        <div class="menus-contentbox__descriptionbox">
-                            <p class="menus-contentbox__description"></p>
-                            <h2 class="menus-contentbox__price"></h2>
-                        </div>
-                    </article>
-                </div>
 
-                <div class="menus-contentbox__desert">
+                    <article class="card card--4">
+                        <div class="card__descriptionbox">
+                            <h2 class="card__title">
+                                Filet de boeuf aux herbes
+                            </h2>
+                            <p class="card__description">
+                                Accompagné de sa ribambelle de légumes
+                            </p>
+                        </div>
+                        <div class="card__price">
+                            <p class="card__price">40€</p>
+                        </div>
+                        <div class="card--confirmation">
+                            <i class="fa-check fas"></i>
+                        </div>
+                    </article>
+                    <article class="card card--5">
+                        <div class="card__descriptionbox">
+                            <h2 class="card__title">
+                                Parmentier de queue de boeuf
+                            </h2>
+                            <p class="card__description">
+                                À la truffe noire sur sa purée de panais
+                            </p>
+                        </div>
+                        <div class="card__price">
+                            <p class="card__price">35€</p>
+                        </div>
+                        <div class="card--confirmation">
+                            <i class="fa-check fas"></i>
+                        </div>
+                    </article>
+                    <article class="card card--6">
+                        <div class="card__descriptionbox">
+                            <h2 class="card__title">Filet de turbot</h2>
+                            <p class="card__description">Aux agrumes</p>
+                        </div>
+                        <div class="card__price">
+                            <p class="card__price">44€</p>
+                        </div>
+                        <div class="card--confirmation">
+                            <i class="fa-check fas"></i>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="menus-contentbox__desert menus-contentbox--3">
                     <h2 class="menus-contentbox__category">Desserts</h2>
-                    <article class="menus-contentbox__cardbox">
-                        <h2 class="menus-contentbox__title"></h2>
-                        <div class="menus-contentbox__descriptionbox">
-                            <p class="menus-contentbox__description"></p>
-                            <h2 class="menus-contentbox__price"></h2>
-                        </div>
-                    </article>
-                    <article class="menus-contentbox__cardbox">
-                        <h2 class="menus-contentbox__title"></h2>
-                        <div class="menus-contentbox__descriptionbox">
-                            <p class="menus-contentbox__description"></p>
-                            <h2 class="menus-contentbox__price"></h2>
-                        </div>
-                    </article>
-                    <article class="menus-contentbox__cardbox">
-                        <h2 class="menus-contentbox__title"></h2>
-                        <div class="menus-contentbox__descriptionbox">
-                            <p class="menus-contentbox__description"></p>
-                            <h2 class="menus-contentbox__price"></h2>
-                        </div>
-                    </article>
-                </div>
 
-                <div class="menus-contentbox__btn"></div>
-            </section>
+                    <article class="card card--7">
+                        <div class="card__descriptionbox">
+                            <h2 class="card__title">Paris-Brest</h2>
+                            <p class="card__description">Revisité</p>
+                        </div>
+
+                        <div class="card__price">
+                            <p class="card__price">18€</p>
+                        </div>
+                        <div class="card--confirmation">
+                            <i class="fa-check fas"></i>
+                        </div>
+                    </article>
+                    <article class="card card--8">
+                        <div class="card__descriptionbox">
+                            <h2 class="card__title">
+                                Macaron au chocolat d'exception
+                            </h2>
+                            <p class="card__description">
+                                Et glace à la vanille de Madagascar
+                            </p>
+                        </div>
+
+                        <div class="card__price">
+                            <p class="card__price">22€</p>
+                        </div>
+                        <div class="card--confirmation">
+                            <i class="fa-check fas"></i>
+                        </div>
+                    </article>
+                    <article class="card card--9">
+                        <div class="card__descriptionbox">
+                            <h2 class="card__title">Mousse au chocolat</h2>
+                            <p class="card__description">
+                                Au piment d'Espelette et à la truffe noire
+                            </p>
+                        </div>
+
+                        <div class="card__price">
+                            <p class="card__price">23€ </p>
+                        </div>
+                        <div class="card--confirmation">
+                            <i class="fa-check fas"></i>
+                        </div>
+                    </article>
+
+                    <div class="btn">
+                        <button class="btn__content">Commander</button>
+                    </div>
+                </section>
+            </div>
             <footer class="omf-footer">
                 <div class="omf-footer__contentbox">
                     <h2 class="omf-footer__heading">ohmyfood</h2>
@@ -126,7 +206,11 @@
                         <p>Devenir partenaire</p>
                     </div>
                     <p class="omf-footer__text">Mentions légales</p>
-                    <p class="omf-footer__text">Contact</p>
+                    <a
+                        href="mailto:ohmyfood@contact.fr"
+                        class="omf-footer__text"
+                        >Contact</a
+                    >
                 </div>
             </footer>
         </main>

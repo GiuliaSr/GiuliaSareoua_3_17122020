@@ -16,14 +16,14 @@
         opacity: 0.9;
         box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
     }
-    @media screen and (min-width: 480px) and (max-width: 1099px) {
+    @include tablette {
         &:active {
             cursor: pointer;
             opacity: 0.9;
             box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
         }
     }
-    @media screen and (min-width: 1100px) {
+    @include desktop {
         &:hover {
             cursor: pointer;
             opacity: 0.9;

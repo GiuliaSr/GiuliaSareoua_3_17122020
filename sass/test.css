@@ -18,7 +18,7 @@ a {
   color: #fff;
 }
 
-@media screen and (min-width: 481px) and (max-width: 1099px) {
+@media screen and (min-width: 641px) and (max-width: 900px) {
   .omf-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -29,19 +29,20 @@ a {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 901px) {
   .omf-footer {
     padding-bottom: 2rem;
   }
 }
 
 .omf-footer__contentbox {
-  margin: 0 2rem;
+  margin-left: 1rem;
   padding: 1rem 0;
 }
 
-@media screen and (min-width: 481px) and (max-width: 1099px) {
+@media screen and (min-width: 641px) and (max-width: 900px) {
   .omf-footer__contentbox {
+    margin: 0 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -55,8 +56,9 @@ a {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 901px) {
   .omf-footer__contentbox {
+    margin: 0 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -75,7 +77,7 @@ a {
   margin: 0;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 901px) {
   .omf-footer__heading {
     width: 100%;
     display: -webkit-box;
@@ -211,7 +213,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 
 .menus-header__logo {
@@ -274,7 +276,7 @@ a {
           box-shadow: 1px 1px 5px 1px #505050;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1099px) {
+@media screen and (min-width: 641px) and (max-width: 900px) {
   .btn .btn__content:active {
     cursor: pointer;
     opacity: 0.9;
@@ -283,7 +285,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 901px) {
   .btn .btn__content:hover {
     cursor: pointer;
     opacity: 0.9;

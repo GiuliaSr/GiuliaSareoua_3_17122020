@@ -9,14 +9,16 @@
         padding-bottom: 2rem;
     }
     &__contentbox {
-        @include contentmarging();
+        margin-left: 1rem;
         padding: 1rem 0;
         @include tablette {
+            @include contentmarging;
             display: flex;
             flex-flow: column wrap;
             align-items: center;
         }
         @include desktop {
+            @include contentmarging;
             display: flex;
             flex-flow: row wrap;
             justify-content: space-evenly;

@@ -57,6 +57,7 @@
             width: 100%;
             justify-content: space-between;
         }
+
         @include tablette {
             flex-flow: row wrap;
             justify-content: space-evenly;
@@ -75,6 +76,7 @@
         @include mobile {
             width: 100%;
         }
+
         @include tablette {
             width: 40%;
             margin-left: 2rem;
@@ -101,7 +103,7 @@
     display: flex;
     align-items: center;
     background-color: $backgroundlight;
-    box-shadow: 1px 1px 5px 1px #cfcfcf;
+    box-shadow: $shadow;
     border-radius: 1rem;
     padding: 0 2rem;
     width: 100%;
@@ -128,41 +130,32 @@
 /*SECTION3*/
 .omf-menus {
     background-color: $backgroundlight;
-    padding: 1rem 0;
     @include tablette {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
+        @include grid-templates;
     }
     @include desktop {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
+        @include grid-templates;
     }
     &__heading {
         @include heading-sections;
-        @include contentmarging();
+        @include contentmarging;
         padding: 1rem 0;
-        @include tablette {
-            width: 100%;
-        }
-        @include desktop {
-            width: 100%;
-        }
     }
     &__contentbox {
-        @include contentmarging();
-        box-shadow: 1px 1px 5px 1px #cfcfcf;
-        margin-bottom: 2rem;
+        box-shadow: $shadow;
         background-color: #fff;
         border-radius: 1rem;
         overflow: hidden;
         position: relative;
+        @include mobile {
+            @include contentmarging;
+            margin-bottom: 2rem;
+        }
         @include tablette {
-            width: 40%;
+            @include grid-homepage;
         }
         @include desktop {
-            width: 40%;
+            @include grid-homepage;
         }
     }
     &__img {
@@ -220,4 +213,7 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
+}
+.omf-footer__contentbox {
+    margin-left: 2rem;
 }

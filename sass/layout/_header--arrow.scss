@@ -1,6 +1,9 @@
 .menus-header {
     display: flex;
     align-items: center;
+    @include mobile {
+        margin: 0 1rem;
+    }
     @include contentmarging;
     &__logo {
         @include logo;

@@ -25,6 +25,9 @@
 
 .menus-contentbox {
     @include contentmarging;
+    @include mobile {
+        margin: 0 1rem;
+    }
     animation: appear 1s both;
     &__heading {
         @include logo;
@@ -32,6 +35,9 @@
         align-items: center;
         justify-content: space-between;
         font-size: 0.9rem;
+        & h1 {
+            max-width: 90%;
+        }
     }
     &__category {
         text-transform: uppercase;
@@ -41,7 +47,6 @@
         @include desktop {
             width: 100%;
         }
-
         &::after {
             content: "";
             background-color: $third;
@@ -53,33 +58,28 @@
     }
     &__entree {
         @include desktop {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
+            @include menupage-flex-sections;
         }
     }
     &__meal {
         @include desktop {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            /*.menus-contentbox__contentbox{
-                margin-right: 5%
-            }*/
+            @include menupage-flex-sections;
         }
     }
     &__desert {
         @include desktop {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
+            @include menupage-flex-sections;
         }
     }
 }
-
+@for $i from 0 to 3 {
+    .menus-contentbox--#{$i} {
+        animation-delay: #{$i/3};
+    }
+}
 .card {
     opacity: 0;
-    @for $i from 1 through 9 {
+    @for $i from 1 through 10 {
         &--#{$i} {
             animation-delay: 200ms * $i;
         }
@@ -90,7 +90,7 @@
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    box-shadow: 1px 1px 5px 1px #cfcfcf;
+    box-shadow: $shadow;
     margin-bottom: 1rem;
     background-color: #fff;
     border-radius: 1rem;
@@ -98,7 +98,7 @@
     @include ellipsis;
 
     @include desktop {
-        width: 30%;
+        width: 31%;
     }
 
     &:hover {
@@ -136,12 +136,11 @@
         width: 100%;
     }
     &__description {
+        @include ellipsis;
+        font-size: 0.9rem;
         margin: 0;
         font-weight: 100;
         transition: all 500ms 100ms;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
         width: 100%;
     }
 
@@ -156,14 +155,12 @@
         transition-delay: 80ms;
     }
     &--confirmation {
+        @include flex-center;
         transform: translate(5rem);
         width: 5rem;
         padding: 0;
         margin: -1rem;
         background-color: $third;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         transition: transform 500ms ease-in-out;
 
         & i {
@@ -177,16 +174,6 @@
     }
 
     .btn {
-        margin-bottom: 1rem;
-    }
-}
-
-.omf-footer {
-    display: flex;
-    justify-content: center;
-}
-@for $i from 0 to 3 {
-    .menus-contentbox--#{$i} {
-        animation-delay: #{$i/3};
+        margin-bottom: 2rem;
     }
 }
