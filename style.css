@@ -31,6 +31,44 @@ a {
   margin: 1rem;
 }
 
+.menus-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2rem;
+}
+
+@media screen and (max-width: 640px) {
+  .menus-header {
+    margin: 0 1rem;
+  }
+}
+
+.menus-header__logo {
+  font-family: "Shrikhand", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.menus-header__arrow {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 1.5rem;
+}
+
 /*FOOTER*/
 .omf-footer {
   background-color: #323232;
@@ -165,27 +203,17 @@ a {
   transition: all 250ms;
   border: 0px solid transparent;
   height: 3rem;
+  cursor: pointer;
 }
 
 .btn .btn__content:active {
-  cursor: pointer;
   opacity: 0.9;
   -webkit-box-shadow: 1px 1px 5px 1px #505050;
           box-shadow: 1px 1px 5px 1px #505050;
 }
 
-@media screen and (min-width: 641px) and (max-width: 900px) {
-  .btn .btn__content:active {
-    cursor: pointer;
-    opacity: 0.9;
-    -webkit-box-shadow: 1px 1px 5px 1px #505050;
-            box-shadow: 1px 1px 5px 1px #505050;
-  }
-}
-
 @media screen and (min-width: 901px) {
   .btn .btn__content:hover {
-    cursor: pointer;
     opacity: 0.9;
     -webkit-box-shadow: 1px 1px 5px 1px #505050;
             box-shadow: 1px 1px 5px 1px #505050;

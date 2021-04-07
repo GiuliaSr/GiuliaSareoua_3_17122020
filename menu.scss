@@ -1,10 +1,13 @@
 @import "./sass/utils/variables";
 @import "./sass/utils/mixins";
 @import "./sass/base/base";
-@import "./sass/layout/footer";
-@import "./sass/composants/heart";
+@import "./sass/layout/header";
 @import "./sass/layout/header--arrow";
+@import "./sass/layout/footer";
 @import "./sass/composants/button.scss";
+@import "./sass/composants/heart.scss";
+@import "./sass/pages/homepage.scss";
+@import "./sass/composants/loader.scss";
 @import "./sass/utils/animations";
 
 .menus-banner {
@@ -22,7 +25,11 @@
     position: relative;
     margin-top: -4rem;
 }
-
+@for $i from 0 to 3 {
+    .menus-contentbox--#{$i} {
+        animation-delay: #{$i/3};
+    }
+}
 .menus-contentbox {
     @include contentmarging;
     @include mobile {
@@ -35,10 +42,12 @@
         align-items: center;
         justify-content: space-between;
         font-size: 0.9rem;
+
         & h1 {
             max-width: 90%;
         }
     }
+
     &__category {
         text-transform: uppercase;
         font-weight: normal;
@@ -72,11 +81,7 @@
         }
     }
 }
-@for $i from 0 to 3 {
-    .menus-contentbox--#{$i} {
-        animation-delay: #{$i/3};
-    }
-}
+
 .card {
     opacity: 0;
     @for $i from 1 through 10 {

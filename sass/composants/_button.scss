@@ -7,25 +7,18 @@
     border-radius: 2rem;
     padding: 0 1rem;
     margin: 1rem 0;
-    box-shadow: 1px 1px 5px 1px #cfcfcf;
+    box-shadow: $shadow;
     transition: all 250ms;
     border: 0px solid transparent;
     height: 3rem;
+    cursor: pointer;
     &:active {
-        cursor: pointer;
         opacity: 0.9;
         box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
     }
-    @include tablette {
-        &:active {
-            cursor: pointer;
-            opacity: 0.9;
-            box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
-        }
-    }
+
     @include desktop {
         &:hover {
-            cursor: pointer;
             opacity: 0.9;
             box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
         }
