@@ -4,6 +4,7 @@
     justify-content: flex-end;
     align-items: center;
     font-size: 1.5rem;
+    cursor: pointer;
     &--nobg {
         position: absolute;
         border: 1px solid transparent;
@@ -18,7 +19,6 @@
         color: transparent;
     }
     &:hover {
-        cursor: pointer;
         & .heart-container--bg {
             transition: transform 0.5s ease-in-out;
             transform: scale(1);
