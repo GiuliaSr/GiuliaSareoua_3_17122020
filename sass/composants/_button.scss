@@ -12,20 +12,19 @@
     border: 0px solid transparent;
     height: 3rem;
     cursor: pointer;
-    &:active {
+
+    &:hover {
         opacity: 0.9;
         box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
-    }
-
-    @include desktop {
-        &:hover {
-            opacity: 0.9;
-            box-shadow: 1px 1px 5px 1px darken($color: #cfcfcf, $amount: 50);
-        }
     }
 }
 .btn {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.btn--menupage .btn__content--menupage {
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }

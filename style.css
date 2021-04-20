@@ -206,18 +206,10 @@ a {
   cursor: pointer;
 }
 
-.btn .btn__content:active {
+.btn .btn__content:hover {
   opacity: 0.9;
   -webkit-box-shadow: 1px 1px 5px 1px #505050;
           box-shadow: 1px 1px 5px 1px #505050;
-}
-
-@media screen and (min-width: 901px) {
-  .btn .btn__content:hover {
-    opacity: 0.9;
-    -webkit-box-shadow: 1px 1px 5px 1px #505050;
-            box-shadow: 1px 1px 5px 1px #505050;
-  }
 }
 
 .btn {
@@ -228,6 +220,12 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.btn--menupage .btn__content--menupage {
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
 }
 
 .heart-container {
@@ -281,44 +279,6 @@ a {
   transition: 650ms;
 }
 
-/*
-.heart-container {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 1.5rem;
-    
-    &--nobg {
-        position: absolute;
-        font-size: 25px;
-        background-color: transparent;
-        z-index: 2;
-        position: absolute;
-        transition-duration: 650ms;
-        &:hover{
-            color: transparent;
-        }
-        &:hover + .heart-container--bg{
-            transform: scale(1);
-        }
-    }
-    &--bg{
-        background: -moz-linear-gradient(360deg, $primary, $second);
-        background: -webkit-linear-gradient(360deg, $primary, $second);
-        background: linear-gradient(360deg, $primary, $second);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 25px;
-        transform: scale(0);
-        transition: transform 500ms;
-        position: absolute;
-        z-index: 1;
-    }
-}
-*/
 /*SECTION1*/
 .omf-resa {
   background-color: #f7f7f7;
@@ -767,13 +727,6 @@ a {
   margin-left: 2rem;
 }
 
-/*<div class="container">
-            <div class="load">
-                <div class="load__bar load__bar--1"></div>
-                <div class="load__bar load__bar--2"></div>
-                <div class="load__bar load__bar--3"></div>
-            </div>
-        </div>*/
 .container {
   background-color: rgba(255, 255, 255, 0.9);
   width: 100%;

@@ -14,7 +14,7 @@
     &__img {
         width: 100%;
         object-fit: cover;
-        height: 30rem;
+        height: 20rem;
     }
 }
 
@@ -83,6 +83,7 @@
 }
 
 .card {
+    cursor: pointer;
     opacity: 0;
     @for $i from 1 through 10 {
         &--#{$i} {
@@ -107,7 +108,6 @@
     }
 
     &:hover {
-        cursor: pointer;
         & .card--confirmation {
             transform: translate(0);
             & i {
@@ -169,6 +169,7 @@
         transition: transform 500ms ease-in-out;
 
         & i {
+            transform: rotate(0);
             background-color: #fff;
             color: $third;
             border: 1px solid #fff;
@@ -179,6 +180,10 @@
     }
 
     .btn {
-        margin-bottom: 2rem;
+        &__content {
+            padding: 0 2rem;
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+        }
     }
 }

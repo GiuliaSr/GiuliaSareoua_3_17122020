@@ -7,16 +7,15 @@
     &--nobg {
         position: absolute;
         border: 1px solid transparent;
-       }
+    }
     &--bg {
         position: absolute;
-       transform: scale(0);
-       background: linear-gradient($primary, $second);
-       border: 1px solid transparent;
-       background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-
+        transform: scale(0);
+        background: linear-gradient($primary, $second);
+        border: 1px solid transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
     }
     &:hover {
         cursor: pointer;
@@ -24,51 +23,10 @@
             transition: transform 0.5s ease-in-out;
             transform: scale(1);
             position: inherit;
-            
         }
         > .heart-container--nobg {
             color: transparent;
             transition: 650ms;
-            
         }
-    }
-    
-}
-/*
-.heart-container {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 1.5rem;
-    
-    &--nobg {
-        position: absolute;
-        font-size: 25px;
-        background-color: transparent;
-        z-index: 2;
-        position: absolute;
-        transition-duration: 650ms;
-        &:hover{
-            color: transparent;
-        }
-        &:hover + .heart-container--bg{
-            transform: scale(1);
-        }
-    }
-    &--bg{
-        background: -moz-linear-gradient(360deg, $primary, $second);
-        background: -webkit-linear-gradient(360deg, $primary, $second);
-        background: linear-gradient(360deg, $primary, $second);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 25px;
-        transform: scale(0);
-        transition: transform 500ms;
-        position: absolute;
-        z-index: 1;
     }
 }
-*/
