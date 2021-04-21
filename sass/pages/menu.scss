@@ -1,0 +1,177 @@
+.menus-banner {
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        height: 20rem;
+    }
+}
+
+.menus-container {
+    background-color: $backgroundlight;
+    border-radius: 2rem 2rem 0 0;
+    z-index: 1;
+    position: relative;
+    margin-top: -4rem;
+}
+@for $i from 0 to 3 {
+    .menus-contentbox--#{$i} {
+        animation-delay: #{$i/3};
+    }
+}
+.menus-contentbox {
+    @include contentmarging;
+    @include mobile {
+        margin: 0 1rem;
+    }
+    animation: appear 1s both;
+    &__heading {
+        @include logo;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.9rem;
+
+        & h1 {
+            max-width: 90%;
+        }
+    }
+
+    &__category {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 1rem;
+        font-weight: 100;
+        @include desktop {
+            width: 100%;
+        }
+        &::after {
+            content: "";
+            background-color: $third;
+            width: 3rem;
+            height: 0.2rem;
+            display: flex;
+            margin: 0.5rem 0;
+        }
+    }
+    &__entree {
+        @include desktop {
+            @include menupage-flex-sections;
+        }
+    }
+    &__meal {
+        @include desktop {
+            @include menupage-flex-sections;
+        }
+    }
+    &__desert {
+        @include desktop {
+            @include menupage-flex-sections;
+        }
+    }
+}
+
+.card {
+    cursor: pointer;
+    opacity: 0;
+    @for $i from 1 through 10 {
+        &--#{$i} {
+            animation-delay: 200ms * $i;
+        }
+    }
+    animation: appear 800ms both ease-in-out;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    box-shadow: $shadow;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    @include ellipsis;
+
+    @include desktop {
+        width: 31%;
+    }
+
+    &:hover {
+        & .card--confirmation {
+            transform: translate(0);
+            & i {
+                transform: rotate(-360deg);
+            }
+        }
+        & .card__price {
+            transform: translate(-1rem);
+        }
+        & .card__description {
+            @include ellipsis;
+            width: 80%;
+        }
+        & .card__title {
+            @include ellipsis;
+            width: 80%;
+        }
+    }
+    &__title {
+        transition: all 500ms ease-in-out 80ms;
+        @include subtitle;
+        margin: 0;
+        padding-bottom: 0.5rem;
+        @include ellipsis;
+        width: 100%;
+    }
+    &__descriptionbox {
+        @include ellipsis;
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+    }
+    &__description {
+        @include ellipsis;
+        font-size: 0.9rem;
+        margin: 0;
+        font-weight: 100;
+        transition: all 500ms 100ms;
+        width: 100%;
+    }
+
+    &__price {
+        @include subtitle;
+        margin: 0;
+        transform: translate(1rem);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        transition: transform 500ms ease-in-out;
+        transition-delay: 80ms;
+    }
+    &--confirmation {
+        @include flex-center;
+        transform: translate(5rem);
+        width: 5rem;
+        padding: 0;
+        margin: -1rem;
+        background-color: $third;
+        transition: transform 500ms ease-in-out;
+
+        & i {
+            transform: rotate(0);
+            background-color: #fff;
+            color: $third;
+            border: 1px solid #fff;
+            border-radius: 2rem;
+            padding: 0.5rem;
+            transition: 500ms ease-in-out;
+        }
+    }
+
+    .btn {
+        &__content {
+            padding: 0 2rem;
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+        }
+    }
+}
